@@ -1,8 +1,8 @@
 // "Jenkinsfile" to build images
 
 node {
-  stage('hostname ?') {
-    // Make the output directory.
+  stage('hostname, id ?') {
+    // Retreive hostname and more ...
     sh '''
       hostname
       id
