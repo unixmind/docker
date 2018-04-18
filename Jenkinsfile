@@ -11,4 +11,5 @@ node {
     sh '''
       docker --version
     '''
+  }
 }
