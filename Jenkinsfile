@@ -1,4 +1,4 @@
-# "Jenkinsfile" to build images
+// "Jenkinsfile" to build images
 
 node {
   stage "Example"
