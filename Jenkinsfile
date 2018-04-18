@@ -15,6 +15,6 @@ node {
   
   stage('Docker image build') {
     // Try to build an image
-    sh "docker built -t example ."
+    sh "docker build -t example ."
   }
 }
