@@ -3,7 +3,10 @@
 node {
   stage('hostname ?') {
     // Make the output directory.
-    sh "hostname"
+    sh '''
+      hostname
+      id
+    '''
   }
   
   stage('Docker release ?') {
