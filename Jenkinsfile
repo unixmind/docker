@@ -13,6 +13,11 @@ node {
     '''
   }
   
+  stage('Docker pull') {
+    // download image from the Docker Hub
+    sh "docker pull bash"
+  }
+  
   stage('Docker image build') {
     // Try to build an image
     sh "docker build -t example ."
