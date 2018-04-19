@@ -7,18 +7,16 @@ node {
         checkout scm
     }
   
+  stage('Git commit, branch ?') {
+    // I would like to display some variables
+    echo GIT_COMMIT
+  }
+  
   stage('hostname, id ?') {
     // Retreive hostname and more ...
     sh '''
       hostname
       id
-    '''
-  }
-  
-  stage('Docker release ?') {
-    // Try to build a Docker image
-    sh '''
-      docker --version
     '''
   }
   
