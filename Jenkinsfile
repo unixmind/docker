@@ -5,11 +5,15 @@ node {
   stage('Clone repository') {
         // clone our repository in our workspace
         checkout scm
+        echo """
+             |GIT_COMMIT: ${GIT_COMMIT}
+             |GIT_BRANCH: ${GIT_BRANCH }
+             """.stripMargin('|')
     }
   
   stage('Git commit, branch ?') {
     // I would like to display some Git variables
-    sh "echo branch=${env.BRANCH_NAME} ${GIT_BRANCH} latest commit=${env.GIT_COMMIT} ${GIT_COMMIT}"
+    sh "echo branch=${env.BRANCH_NAME} latest commit=${env.GIT_COMMIT}"
   }
   
   stage('hostname, id ?') {
