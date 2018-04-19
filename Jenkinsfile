@@ -22,9 +22,12 @@ node {
     '''
   }
   
-  stage('Docker pull') {
+  stage('Docker pull images') {
     // download image from the Docker Hub
-    sh "docker pull bash"
+    sh '''
+      docker pull graze/bats
+      docker pull bash:latest
+    '''
   }
   
   stage('Docker image build') {
