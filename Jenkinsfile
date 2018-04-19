@@ -9,7 +9,7 @@ node {
   
   stage('Git commit, branch ?') {
     // I would like to display some Git variables
-    sh "echo branch=${env.BRANCH_NAME} latest commit=${env.GIT_COMMIT}"
+    sh "echo branch=${env.BRANCH_NAME} ${GIT_BRANCH} latest commit=${env.GIT_COMMIT} ${GIT_COMMIT}"
   }
   
   stage('hostname, id ?') {
