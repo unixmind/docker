@@ -1,6 +1,12 @@
 // "Jenkinsfile" to build images
 
 node {
+
+  stage('Clone repository') {
+        // clone our repository in our workspace
+        checkout scm
+    }
+  
   stage('hostname, id ?') {
     // Retreive hostname and more ...
     sh '''
